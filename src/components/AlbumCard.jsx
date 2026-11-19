@@ -14,9 +14,9 @@ export default function AlbumCard({ album, onAddToCart }) {
         <button
           className="btn"
           onClick={() => onAddToCart(album)}
-          disabled={!album.inStock}
+          disabled={album.stock === 0}
         >
-          {album.inStock ? 'Add to cart' : 'Sold out'}
+          {album.stock > 0 ? 'Add to cart' : 'Sold out'}
         </button>
       </div>
     </article>

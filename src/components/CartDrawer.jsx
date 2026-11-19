@@ -32,7 +32,7 @@ export default function CartDrawer({ isOpen, cart, cartTotal, onClose, onChangeQ
             <strong>${cartTotal.toFixed(2)}</strong>
           </div>
           <button className="btn wide" onClick={handleCheckout} disabled={cart.length === 0}>
-            Go to checkout
+            Go to the checkout
           </button>
         </div>
       </aside>

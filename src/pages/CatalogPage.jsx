@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import albums from '../data/albums.js'
+import { ALBUMS } from '../data/albums.js'
 import CatalogHero from '../components/CatalogHero.jsx'
 import GenreFilterBar from '../components/GenreFilterBar.jsx'
 import AlbumGrid from '../components/AlbumGrid.jsx'
@@ -10,7 +10,7 @@ export default function CatalogPage({ onAddToCart }) {
   const [selectedGenre, setSelectedGenre] = useState('All')
 
   const visibleAlbums =
-    selectedGenre === 'All' ? albums : albums.filter((a) => a.genre === selectedGenre)
+    selectedGenre === 'All' ? ALBUMS : ALBUMS.filter((a) => a.genre === selectedGenre)
 
   return (
     <>
